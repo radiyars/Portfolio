@@ -1,0 +1,378 @@
+
+@import "_nullstyle";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,300,700,600,900);
+
+body {
+	height: 100%;
+	background: #2e2f2e;
+	font-size: 14px;
+	color: #bac8d3;
+	font-weight: 400;
+	font-family: Montserrat;
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+._container {
+	max-width: 1070px;
+	padding: 0px 15px;
+	margin: 0 auto;
+	box-sizing: content-box;
+}
+
+$minWidth: 320;
+$maxWidth: 1920px;
+$maxWidhContainer: 1070px;
+$pContainer: $maxWidhContainer + 12px; // 1
+$p992: 991.98px; // 2
+$p768: 767.98px; // 3
+$p480: 479.98px; // 4
+$title-padding-top: 80px;
+
+
+.title {
+	color: #e0a80d;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 130%;
+	margin: 0px auto 50px auto;
+	text-align: center;
+}
+
+
+/*-------------------
+		HEADER
+--------------------*/
+
+.header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 50;
+	background: #2b2c2c;
+
+	&__container {
+		min-height: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	@media (max-width: 992px) {
+		&__container {
+			min-height: 60px;
+		}
+	}
+
+	&__logo {
+		font-size: 20px;
+		font-weight: 600;
+		color: #ffffff;
+		margin: 0 50px 0 0;
+
+		@media (max-width: 992px) {
+			font-size: 23px;
+		}
+	}
+
+
+	&__menu {
+	}
+}
+
+.menu {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+	}
+
+	&__item:not(:last-child) {
+		margin: 0px 50px 0px 0px;
+	}
+
+	@media (max-width: 992px) {
+		&__item:not(:last-child) {
+			margin: 0px 30px 0px 0px;
+		}
+	}
+
+	&__link {
+		color: #7d8792;
+		font-size: 14px;
+		line-height: 170%;
+	}
+
+	&__link:hover {
+		color: white;
+	}
+}
+
+/*===================
+		PAGE
+===================*/
+.page {
+	&__home {
+	}
+
+	&__about {
+		background: #2b2c2c;
+		padding: $title-padding-top 0px;
+		margin-bottom: 80px;
+	}
+
+	&__skills {
+		margin-bottom: 80px;
+	}
+
+	&__experience {
+		background: #2b2c2c;
+		padding: $title-padding-top 0px;
+		margin-bottom: 80px;
+	}
+}
+
+/*-------------------
+		PAGE__HOME
+--------------------*/
+
+.home {
+	padding: 90px 0 0 0;
+	// margin: 0 0 200px 0;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media (max-width: $p992) {
+		padding: 60px 0 0 0;
+		margin: 0 0 100px 0;
+	}
+
+	@media (max-width: $p768) {
+		padding: 100px 0 0 0;
+		margin: 0 0 50px 0;
+	}
+
+	&__container {
+		display: flex;
+		@media (max-width: $p768) {
+			flex-direction: column-reverse;
+			text-align: center;
+			align-items: center;
+		}
+	}
+
+	&__info {
+		padding: 0 100px 0 0;
+		flex: 1 1 auto;
+		// align-items: center;
+		@media (max-width: $pContainer) {
+			padding: 0 50px 0 0;
+		}
+
+		@media (max-width: $p768) {
+			padding: 50px 0 0 0;
+		}
+
+
+	}
+
+	&__subtitle {
+		color: white;
+		margin: 0 0 20px 0;
+		font-size: 30px;
+	}
+
+	&__title {
+		margin: 0 0 30px 0;
+		text-align: left;
+		font-size: 40px;
+
+	}
+
+	&__text {
+		color: white;
+		line-height: 150%;
+		margin: 0 0 30px 0;
+	}
+
+	&__buttons {
+	}
+
+	&__button {
+	}
+
+	&__avatar {
+		flex: 0 0 300px;
+		height: 250px;
+		// position: relative;
+		overflow: hidden;
+		img {
+			// object-fit: contain;
+			max-width: 100%;
+			// position: absolute;
+			// top: -104px;
+		}
+		border: 7px solid white;
+		// @media (max-width: $p768) {
+		// 	width: 200px;
+
+		// }
+	}
+}
+
+
+.button {
+	border: 2px solid #e0a80d;
+	border-radius: 20px;
+	line-height: 250%;
+	display: inline-flex;
+	// align-items: center;
+	// justify-content: center;
+	// text-align: center;
+	padding: 0 30px;
+	color: white;
+	transition: background-color 0.3s ease 0s;
+	@media (min-width: 992px) {
+		&:hover {
+			background-color: #e0a80d;
+		}
+	}
+}
+
+.avatar {
+	&__container {
+	}
+}
+
+/*-------------------
+		PAGE__ABOUT-ME
+--------------------*/
+
+.about {
+
+	&__container {
+	}
+
+	&__title {
+		margin: 0px auto 50px auto;
+		text-align: center;
+	}
+
+	&__text {
+		text-align: justify;
+	}
+}
+
+
+/*-------------------
+		PAGE__SKILLS
+--------------------*/
+
+.skills {
+
+	&__container {
+	}
+
+	&__grid {
+		display: grid;
+		// grid-template-columns: 1fr minmax(200px, 1fr) 1fr;
+		// grid-template-columns: repeat(3, 1fr);
+		// grid-template-rows: 200px;
+		grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+		gap: 20px;
+		// grid-auto-rows: 200px;
+	}
+
+}
+
+
+.skill {
+
+	background-color: #212222;
+	padding: 15px;
+
+	&__head{
+		display: inline-flex;
+		margin-bottom: 20px;
+	}
+
+	div{
+		margin: auto 8px auto 0;
+	}
+
+
+	img{
+		max-width: 20px;
+		object-fit: contain;
+		margin-right: 8px;
+	}
+	
+
+	&__title {
+		color: white;
+		font-weight: 600;
+		margin: 0 auto 15px auto;
+	}
+
+	ul {
+		margin-top: 10px;
+	}
+
+	li {
+		line-height: 160%;
+	}
+
+}
+
+
+.experience {
+
+	&__container {
+	}
+
+	&__no-speciality {
+	}
+
+	&__by-speciality {
+	}
+}
+
+.no-speciality {
+
+	&__title {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+
+	&__row {
+		display: flex;
+	}
+
+	&__date {
+		width: 180px;
+	}
+
+	&__description{
+		flex: 1 1;
+	}
+
+	&__position, &__achievements {
+		text-align: left;
+		margin-bottom: 20px;
+		color: white;
+	}
+	
+	
+
+}
