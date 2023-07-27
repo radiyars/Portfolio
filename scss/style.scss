@@ -281,6 +281,8 @@ $title-padding-top: 80px;
 
 .skills {
 
+	position: relative;
+
 	&__container {
 	}
 
@@ -301,6 +303,7 @@ $title-padding-top: 80px;
 
 	background-color: #212222;
 	padding: 15px;
+	position: relative;
 
 	&__head{
 		display: inline-flex;
@@ -318,16 +321,21 @@ $title-padding-top: 80px;
 		margin-right: 8px;
 	}
 	
-
 	&__title {
 		color: white;
 		font-weight: 600;
 		margin: 0 auto 15px auto;
 	}
 
-	ul {
+
+	&__ul {
 		margin-top: 10px;
+		// display: none;
 	}
+
+	// ul.open {
+	// 	display: block;
+	// }
 
 	li {
 		line-height: 160%;
@@ -335,6 +343,47 @@ $title-padding-top: 80px;
 
 }
 
+.arrow {
+	display: none;
+	position: absolute;
+	right: 15px;
+	top: 17px;
+	width: 0;
+	height: 0;
+	border-top: 8px solid #e0a80d;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+}
+
+.arrow.active {
+	transform: rotate(-180deg);
+}
+
+body.touch .arrow {
+	display: block;
+}
+
+body.touch .skill__ul {
+	display: none;
+}
+
+body.touch .skill__ul.open {
+	display: block;
+}
+
+body.touch .skills__grid {
+	@media (max-width: $p768) {
+		grid-template: repeat(1, auto) / repeat(1, 1fr);
+	}
+
+}
+
+
+
+
+.parent {
+
+}
 
 .experience {
 
