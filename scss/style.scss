@@ -139,6 +139,15 @@ $title-padding-top: 80px;
 		padding: $title-padding-top 0px;
 		margin-bottom: 80px;
 	}
+
+	&__education {
+		margin-bottom: 80px;
+	}
+
+	&__course{
+		padding: $title-padding-top 0px;
+		margin-bottom: 80px;
+	}
 }
 
 /*-------------------
@@ -294,6 +303,10 @@ $title-padding-top: 80px;
 		grid-template: repeat(2, 1fr) / repeat(4, 1fr);
 		gap: 20px;
 		// grid-auto-rows: 200px;
+		@media (max-width: $p768) {
+			grid-template: repeat(1, auto) / repeat(1, 1fr);
+			gap: 0px;
+		}
 	}
 
 }
@@ -314,7 +327,6 @@ $title-padding-top: 80px;
 		margin: auto 8px auto 0;
 	}
 
-
 	img{
 		max-width: 20px;
 		object-fit: contain;
@@ -327,16 +339,18 @@ $title-padding-top: 80px;
 		margin: 0 auto 15px auto;
 	}
 
-
 	&__ul {
 		margin-top: 10px;
-		// display: none;
+		@media (max-width: $p768) {
+			display: none;
+			padding-left: 10px;
+		}
 	}
 
-	// ul.open {
-	// 	display: block;
-	// }
-
+	&__open {
+		display: block;
+	}
+		
 	li {
 		line-height: 160%;
 	}
@@ -353,37 +367,17 @@ $title-padding-top: 80px;
 	border-top: 8px solid #e0a80d;
 	border-right: 8px solid transparent;
 	border-left: 8px solid transparent;
-}
-
-.arrow.active {
-	transform: rotate(-180deg);
-}
-
-body.touch .arrow {
-	display: block;
-}
-
-body.touch .skill__ul {
-	display: none;
-}
-
-body.touch .skill__ul.open {
-	display: block;
-}
-
-body.touch .skills__grid {
 	@media (max-width: $p768) {
-		grid-template: repeat(1, auto) / repeat(1, 1fr);
+		display: block;
 	}
 
+	&__active {
+		transform: rotate(-180deg);
+
+	}
 }
 
 
-
-
-.parent {
-
-}
 
 .experience {
 
@@ -403,25 +397,30 @@ body.touch .skills__grid {
 		text-align: left;
 		margin-bottom: 20px;
 	}
+	
+}
 
-	&__row {
-		display: flex;
+.info{
+
+	display: flex;
+
+	@media (max-width: $p768) {
+		flex-direction: column;
 	}
 
 	&__date {
 		width: 180px;
+		font-size: 20px;
 	}
 
 	&__description{
 		flex: 1 1;
 	}
 
-	&__position, &__achievements {
+	&__title {
 		text-align: left;
 		margin-bottom: 20px;
 		color: white;
 	}
-	
-	
-
 }
+

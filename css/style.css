@@ -218,6 +218,15 @@ body {
   margin-bottom: 80px;
 }
 
+.page__education {
+  margin-bottom: 80px;
+}
+
+.page__course {
+  padding: 80px 0px;
+  margin-bottom: 80px;
+}
+
 /*-------------------
 		PAGE__HOME
 --------------------*/
@@ -365,6 +374,15 @@ body {
   gap: 20px;
 }
 
+@media (max-width: 767.98px) {
+  .skills__grid {
+    -ms-grid-rows: (auto)[1];
+    -ms-grid-columns: (1fr)[1];
+        grid-template: repeat(1, auto)/repeat(1, 1fr);
+    gap: 0px;
+  }
+}
+
 .skill {
   background-color: #212222;
   padding: 15px;
@@ -399,6 +417,17 @@ body {
   margin-top: 10px;
 }
 
+@media (max-width: 767.98px) {
+  .skill__ul {
+    display: none;
+    padding-left: 10px;
+  }
+}
+
+.skill__open {
+  display: block;
+}
+
 .skill li {
   line-height: 160%;
 }
@@ -415,29 +444,15 @@ body {
   border-left: 8px solid transparent;
 }
 
-.arrow.active {
+@media (max-width: 767.98px) {
+  .arrow {
+    display: block;
+  }
+}
+
+.arrow__active {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
-}
-
-body.touch .arrow {
-  display: block;
-}
-
-body.touch .skill__ul {
-  display: none;
-}
-
-body.touch .skill__ul.open {
-  display: block;
-}
-
-@media (max-width: 767.98px) {
-  body.touch .skills__grid {
-    -ms-grid-rows: (auto)[1];
-    -ms-grid-columns: (1fr)[1];
-        grid-template: repeat(1, auto)/repeat(1, 1fr);
-  }
 }
 
 .no-speciality__title {
@@ -445,23 +460,33 @@ body.touch .skill__ul.open {
   margin-bottom: 20px;
 }
 
-.no-speciality__row {
+.info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.no-speciality__date {
-  width: 180px;
+@media (max-width: 767.98px) {
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
-.no-speciality__description {
+.info__date {
+  width: 180px;
+  font-size: 20px;
+}
+
+.info__description {
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
 }
 
-.no-speciality__position, .no-speciality__achievements {
+.info__title {
   text-align: left;
   margin-bottom: 20px;
   color: white;
