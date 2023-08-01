@@ -34,6 +34,7 @@ $p992: 991.98px; // 2
 $p768: 767.98px; // 3
 $p480: 479.98px; // 4
 $title-padding-top: 80px;
+$section-margin-bottom: 80px;
 
 
 .title {
@@ -45,6 +46,9 @@ $title-padding-top: 80px;
 	text-align: center;
 }
 
+section {
+	scroll-margin-top: $title-padding-top + $section-margin-bottom;
+}
 
 /*-------------------
 		HEADER
