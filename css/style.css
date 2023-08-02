@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* nullsyle > nullsyle > nullsyle > nullsyle > nullsyle > nullsyle > */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900);
 * {
@@ -199,7 +200,7 @@ section {
 }
 
 .menu__link {
-  color: #7d8792;
+  color: #e0a80d;
   font-size: 14px;
   line-height: 170%;
 }
@@ -208,9 +209,9 @@ section {
   color: white;
 }
 
-/*===================
+/*===========================================================
 		PAGE
-===================*/
+============================================================*/
 .page__home {
   padding: 100px 0 0 0;
 }
@@ -239,6 +240,11 @@ section {
 
 .page__course {
   margin-bottom: 80px;
+}
+
+.page__contaсts {
+  background: #2b2c2c;
+  padding: 80px 0px;
 }
 
 /*-------------------
@@ -356,6 +362,7 @@ section {
   color: white;
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -520,11 +527,17 @@ section {
   color: white;
   display: block;
   margin: auto 8px auto 0;
+  font-size: 20px;
+  margin-right: 20px;
 }
 
 .contacts img {
-  max-width: 20px;
+  max-width: 30px;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-right: 8px;
+  margin-right: 20px;
+}
+
+.contacts li {
+  margin-bottom: 20px;
 }

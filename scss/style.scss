@@ -114,7 +114,7 @@ section {
 	}
 
 	&__link {
-		color: #7d8792;
+		color: #e0a80d;
 		font-size: 14px;
 		line-height: 170%;
 	}
@@ -124,9 +124,10 @@ section {
 	}
 }
 
-/*===================
+/*===========================================================
 		PAGE
-===================*/
+============================================================*/
+
 .page {
 	
 	&__home {
@@ -155,9 +156,15 @@ section {
 		padding: $section-padding-top-bottom 0px;
 		margin-bottom: $section-margin-bottom;
 	}
-
-	&__course{
+	
+	&__course {
 		margin-bottom: $section-margin-bottom;
+	}
+	
+	&__contaсts {
+		background: #2b2c2c;
+		padding: $section-padding-top-bottom 0px;
+		// margin-bottom: $section-margin-bottom;
 	}
 }
 
@@ -270,7 +277,7 @@ section {
 	padding: 0 30px;
 	color: white;
 	transition: background-color 0.3s ease 0s;
-	// font-size: 16px;
+	font-size: 16px;
 	font-weight: 600;
 
 	@media (min-width: 992px) {
@@ -445,6 +452,7 @@ section {
 	}
 }
 
+
 .contacts {
 	&__item {
 		display: flex;
@@ -454,12 +462,17 @@ section {
 		color: white;
 		display: block;
 		margin: auto 8px auto 0;
-		
+		font-size: 20px;
+		margin-right: 20px;
 	}
 
 	img {
-		max-width: 20px;
+		max-width: 30px;
 		object-fit: contain;
-		margin-right: 8px;
+		margin-right: 20px;
+
+	}
+	li {
+		margin-bottom: 20px;
 	}
 }
