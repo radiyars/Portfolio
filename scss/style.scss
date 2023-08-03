@@ -6,8 +6,9 @@
 body {
 	height: 100%;
 	background: #2e2f2e;
-	font-size: 14px;
+	font-size: 16px;
 	color: #bac8d3;
+	line-height: 130%;
 	font-weight: 400;
 	font-family: Montserrat;
 }
@@ -19,12 +20,7 @@ body {
 	flex-direction: column;
 }
 
-._container {
-	max-width: 1070px;
-	padding: 0px 15px;
-	margin: 0 auto;
-	box-sizing: content-box;
-}
+
 
 $minWidth: 320;
 $maxWidth: 1920px;
@@ -38,9 +34,21 @@ $section-margin-bottom: 80px;
 $header-heght: 100px;
 
 
+._container {
+	max-width: 1070px;
+	// padding: 0px 15px;
+	padding: 0px 15px;
+	@media (max-width: $p768) {
+		padding: 0px 8px;
+	}
+	margin: 0 auto;
+	box-sizing: content-box;
+}
+
+
 .title {
 	color: #e0a80d;
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: 600;
 	line-height: 130%;
 	margin: 0px auto 50px auto;
@@ -69,47 +77,69 @@ section {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-	}
 
-	@media (max-width: 992px) {
-		&__container {
+		@media (max-width: $p768) {
 			min-height: 60px;
 		}
 	}
 
 	&__logo {
+
 		font-size: 30px;
 		font-weight: 600;
 		color: #ffffff;
 		margin: 0 50px 0 0;
 
-		@media (max-width: 992px) {
+		@media (max-width: $p768) {
 			font-size: 23px;
+			margin: 0 20px 0 0;
 		}
 	}
-
 }
 
 .menu {
-
+	
+	
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: flex-end;
 	}
 
 
 	a {
 		font-size: 17px;
 		font-weight: 500;
+		
+		@media (max-width: $p768) {
+			font-size: 14px;
+		}
+
 	}
 
-	&__item:not(:last-child) {
-		margin: 0px 30px 0px 0px;
+	// &__item:not(:first-child) {
+
+	&__item {
+		margin: 0px 0px 0px 30px;
+		
+		@media (max-width: $p768) {
+			margin: 0px 0px 0px 15px;
+		}
 	}
 
-	@media (max-width: 992px) {
-		&__item:not(:last-child) {
-			margin: 0px 30px 0px 0px;
+	&__item:nth-last-child(2){
+		margin: 0px 30px 0px 30px;
+		
+		@media (max-width: $p768) {
+			margin: 0px 15px 0px 15px;
+		}
+	}
+
+	&__item:first-child{
+		margin: 0px;
+		
+		@media (max-width: $p768) {
+			margin: 0px ;
 		}
 	}
 
@@ -117,6 +147,7 @@ section {
 		color: #e0a80d;
 		font-size: 14px;
 		line-height: 170%;
+		transition: 0.15s;
 	}
 
 	&__link:hover {
@@ -137,24 +168,25 @@ section {
 	&__about {
 		background: #2b2c2c;
 		padding: $section-padding-top-bottom 0px;
-		margin-bottom: $section-margin-bottom;
+		// margin-bottom: $section-margin-bottom;
 	}
 
 	&__skills {
 		padding: $section-padding-top-bottom 0px;
 
-		margin-bottom: $section-margin-bottom;
+		// margin-bottom: $section-margin-bottom;
 	}
 
 	&__experience {
 		background: #2b2c2c;
 		padding: $section-padding-top-bottom 0px;
-		margin-bottom: $section-margin-bottom;
+		// margin-bottom: $section-margin-bottom;
 	}
 
 	&__education {
 		padding: $section-padding-top-bottom 0px;
-		margin-bottom: $section-margin-bottom;
+		padding-bottom: 40px ;
+		// margin-bottom: $section-margin-bottom;
 	}
 	
 	&__course {
@@ -419,13 +451,26 @@ section {
 	}
 }
 
-.no-speciality {
+.no-speciality  {
 
-	&__title {
+	&__subtitle {
 		text-align: left;
 		margin-bottom: 20px;
+		font-size: 22px;
 	}
-	
+
+	margin-bottom: 30px;
+
+}
+
+.by-speciality {
+
+	&__subtitle {
+		text-align: left;
+		margin-bottom: 20px;
+		font-size: 22px;
+	}
+
 }
 
 .info{
@@ -438,7 +483,9 @@ section {
 
 	&__date {
 		width: 180px;
-		font-size: 20px;
+		font-size: 18px;
+		line-height: 140%;
+		// margin-right: 10px;
 	}
 
 	&__description{
@@ -447,13 +494,55 @@ section {
 
 	&__title {
 		text-align: left;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 		color: white;
+		font-size: 20px;
+	}
+
+	li {
+		margin-bottom: 10px;
+		text-align: justify;
+
+	}
+	
+	ul {
+		margin-bottom: 30px;
+	}
+	
+	&__projects {
+		display: flex;
+	}
+
+	&__project {
+		display: flex;
+		flex-direction: column;
+		margin-right: 20px;
+		margin-bottom: 20px;
+
+		a {
+			padding-top: 10px;
+			text-align: center;
+			color: white;
+			font-size: 18px;
+		}
+
+		img {
+			max-height: 50px;
+			margin: 6px;
+			transition: 0.1s;
+		}
+
+		img:hover {
+			max-height: 56px;
+			margin: 3px;
+		}
+	
 	}
 }
 
 
 .contacts {
+	
 	&__item {
 		display: flex;
 	}
@@ -462,8 +551,13 @@ section {
 		color: white;
 		display: block;
 		margin: auto 8px auto 0;
-		font-size: 20px;
+		font-size: 17px;
 		margin-right: 20px;
+		transition: 0.15s;
+	}
+	
+	a:hover:not(.button) {
+		color: #e0a80d;
 	}
 
 	img {
