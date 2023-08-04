@@ -100,6 +100,12 @@ body {
   font-family: Montserrat;
 }
 
+@media (max-width: 767.98px) {
+  body {
+    font-size: 14px;
+  }
+}
+
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -135,8 +141,34 @@ body {
   text-align: center;
 }
 
+@media (max-width: 767.98px) {
+  .title {
+    margin: 0px auto 25px auto;
+    font-size: 20px;
+  }
+}
+
+.subtitle {
+  line-height: 130%;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+@media (max-width: 767.98px) {
+  .subtitle {
+    font-size: 18px;
+  }
+}
+
 section {
   scroll-margin-top: 100px;
+}
+
+@media (max-width: 767.98px) {
+  section {
+    scroll-margin-top: 50px;
+  }
 }
 
 /*-------------------
@@ -260,8 +292,20 @@ section {
   padding: 80px 0px;
 }
 
+@media (max-width: 767.98px) {
+  .page__about {
+    padding: 30px 0px;
+  }
+}
+
 .page__skills {
   padding: 80px 0px;
+}
+
+@media (max-width: 767.98px) {
+  .page__skills {
+    padding: 30px 0px;
+  }
 }
 
 .page__experience {
@@ -269,18 +313,43 @@ section {
   padding: 80px 0px;
 }
 
+@media (max-width: 767.98px) {
+  .page__experience {
+    padding: 30px 0px;
+  }
+}
+
 .page__education {
   padding: 80px 0px;
   padding-bottom: 40px;
+}
+
+@media (max-width: 767.98px) {
+  .page__education {
+    padding: 30px 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .page__course {
   margin-bottom: 80px;
 }
 
+@media (max-width: 767.98px) {
+  .page__course {
+    margin-bottom: 30px;
+  }
+}
+
 .page__contaсts {
   background: #2b2c2c;
   padding: 80px 0px;
+}
+
+@media (max-width: 767.98px) {
+  .page__contaсts {
+    padding: 30px 0px;
+  }
 }
 
 /*-------------------
@@ -360,11 +429,23 @@ section {
   font-size: 25px;
 }
 
+@media (max-width: 767.98px) {
+  .home__subtitle {
+    font-size: 22px;
+  }
+}
+
 .home__title {
   margin: 0;
   text-align: left;
   font-size: 50px;
   font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+  .home__title {
+    font-size: 35px;
+  }
 }
 
 .home__text {
@@ -373,6 +454,12 @@ section {
   margin: 0 0 20px 0;
   font-size: 45px;
   font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+  .home__text {
+    font-size: 30px;
+  }
 }
 
 .home__avatar {
@@ -408,21 +495,16 @@ section {
   }
 }
 
-/*-------------------
-		PAGE__ABOUT-ME
---------------------*/
-.about__title {
-  margin: 0px auto 50px auto;
-  text-align: center;
-}
-
+/*===========================================================
+		ABOUT
+============================================================*/
 .about__text {
   text-align: justify;
 }
 
-/*-------------------
-		PAGE__SKILLS
---------------------*/
+/*===========================================================
+		SKILLS
+============================================================*/
 .skills {
   position: relative;
 }
@@ -448,6 +530,13 @@ section {
 .skill {
   background-color: #212222;
   padding: 15px;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .skill {
+    padding: 8px;
+  }
 }
 
 .skill__head {
@@ -516,22 +605,24 @@ section {
           transform: rotate(-180deg);
 }
 
+/*===========================================================
+		EXPERIANCE
+============================================================*/
 .no-speciality {
   margin-bottom: 30px;
 }
 
 .no-speciality__subtitle {
   text-align: left;
-  margin-bottom: 20px;
-  font-size: 22px;
 }
 
 .by-speciality__subtitle {
   text-align: left;
-  margin-bottom: 20px;
-  font-size: 22px;
 }
 
+/*===========================================================
+		INFO
+============================================================*/
 .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -563,7 +654,6 @@ section {
   text-align: left;
   margin-bottom: 15px;
   color: white;
-  font-size: 20px;
 }
 
 .info li {
@@ -593,13 +683,6 @@ section {
   margin-bottom: 20px;
 }
 
-.info__project a {
-  padding-top: 10px;
-  text-align: center;
-  color: white;
-  font-size: 18px;
-}
-
 .info__project img {
   max-height: 50px;
   margin: 6px;
@@ -612,6 +695,23 @@ section {
   margin: 3px;
 }
 
+.info__project a {
+  padding-top: 10px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+@media (max-width: 767.98px) {
+  .info__project a {
+    font-size: 16px;
+    padding-top: 0px;
+  }
+}
+
+/*===========================================================
+		CONTACTS
+============================================================*/
 .contacts__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -621,11 +721,16 @@ section {
 .contacts a {
   color: white;
   display: block;
-  margin: auto 8px auto 0;
+  margin: auto 20px auto 0;
   font-size: 17px;
-  margin-right: 20px;
   -webkit-transition: 0.15s;
   transition: 0.15s;
+}
+
+@media (max-width: 767.98px) {
+  .contacts a {
+    font-size: 16px;
+  }
 }
 
 .contacts a:hover:not(.button) {
@@ -641,4 +746,10 @@ section {
 
 .contacts li {
   margin-bottom: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .contacts li {
+    margin-bottom: 10px;
+  }
 }

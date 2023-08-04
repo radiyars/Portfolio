@@ -3,24 +3,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900);
 
-body {
-	height: 100%;
-	background: #2e2f2e;
-	font-size: 16px;
-	color: #bac8d3;
-	line-height: 130%;
-	font-weight: 400;
-	font-family: Montserrat;
-}
-
-.wrapper {
-	overflow: hidden;
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-
 
 $minWidth: 320;
 $maxWidth: 1920px;
@@ -29,9 +11,34 @@ $pContainer: $maxWidhContainer + 12px; // 1
 $p992: 991.98px; // 2
 $p768: 767.98px; // 3
 $p480: 479.98px; // 4
-$section-padding-top-bottom: 80px;
-$section-margin-bottom: 80px;
-$header-heght: 100px;
+$section-padding-top-bottom-1070: 80px;
+$section-padding-top-bottom-768: 30px;
+$section-margin-bottom-1070: 80px;
+$section-margin-bottom-768: 30px;
+$header-heght-1070: 100px;
+$header-heght-768: 50px;
+
+
+body {
+	height: 100%;
+	background: #2e2f2e;
+	font-size: 16px;
+	color: #bac8d3;
+	line-height: 130%;
+	font-weight: 400;
+	font-family: Montserrat;
+
+	@media (max-width: $p768) {
+		font-size: 14px;
+	}
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
 
 
 ._container {
@@ -53,11 +60,32 @@ $header-heght: 100px;
 	line-height: 130%;
 	margin: 0px auto 50px auto;
 	text-align: center;
+
+	@media (max-width: $p768) {
+		margin: 0px auto 25px auto;
+		font-size: 20px;
+	}
 }
 
+.subtitle {
+
+	line-height: 130%;
+	font-weight: 600;
+	margin-bottom: 20px;
+	font-size: 22px;
+
+	@media (max-width: $p768) {
+		font-size: 18px;
+	}
+}
+
+
 section {
-	// scroll-margin-top: $title-padding-top + $section-margin-bottom;
-	scroll-margin-top: $header-heght;
+	scroll-margin-top: $header-heght-1070;
+
+	@media (max-width: $p768) {
+		scroll-margin-top: $header-heght-768;
+	}
 }
 
 /*-------------------
@@ -73,7 +101,7 @@ section {
 	background: #2b2c2c;
 
 	&__container {
-		min-height: $header-heght;
+		min-height: $header-heght-1070;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -159,44 +187,62 @@ section {
 		PAGE
 ============================================================*/
 
-.page {
+.page { 
 	
 	&__home {
-		padding: $header-heght 0 0 0;
+		padding: $header-heght-1070 0 0 0;
 	}
 
 	&__about {
 		background: #2b2c2c;
-		padding: $section-padding-top-bottom 0px;
-		// margin-bottom: $section-margin-bottom;
+		padding: $section-padding-top-bottom-1070 0px;
+		
+		@media (max-width: $p768) {
+			padding: $section-padding-top-bottom-768 0px;
+		}
 	}
 
 	&__skills {
-		padding: $section-padding-top-bottom 0px;
+		padding: $section-padding-top-bottom-1070 0px;
 
-		// margin-bottom: $section-margin-bottom;
+		@media (max-width: $p768) {
+			padding: $section-padding-top-bottom-768 0px;
+		}
 	}
 
 	&__experience {
 		background: #2b2c2c;
-		padding: $section-padding-top-bottom 0px;
-		// margin-bottom: $section-margin-bottom;
+		padding: $section-padding-top-bottom-1070 0px;
+		@media (max-width: $p768) {
+			padding: $section-padding-top-bottom-768 0px;
+		}
 	}
 
 	&__education {
-		padding: $section-padding-top-bottom 0px;
+		padding: $section-padding-top-bottom-1070 0px;
 		padding-bottom: 40px ;
-		// margin-bottom: $section-margin-bottom;
+
+		@media (max-width: $p768) {
+			padding: $section-padding-top-bottom-768 0px;
+			padding-bottom: 0px ;
+		}
 	}
 	
 	&__course {
-		margin-bottom: $section-margin-bottom;
+		margin-bottom: $section-margin-bottom-1070;
+
+		@media (max-width: $p768) {
+			margin-bottom: $section-margin-bottom-768;
+		}
 	}
 	
 	&__contaсts {
 		background: #2b2c2c;
-		padding: $section-padding-top-bottom 0px;
-		// margin-bottom: $section-margin-bottom;
+		padding: $section-padding-top-bottom-1070 0px;
+
+		@media (max-width: $p768) {
+			padding: $section-padding-top-bottom-768 0px;
+		}
 	}
 }
 
@@ -252,6 +298,10 @@ section {
 		// color: white;
 		margin: 0 0 10px 0;
 		font-size: 25px;
+		
+		@media (max-width: $p768) {
+			font-size: 22px;
+		}
 	}
 
 
@@ -260,6 +310,10 @@ section {
 		text-align: left;
 		font-size: 50px;
 		font-weight: 600;
+		
+		@media (max-width: $p768) {
+			font-size: 35px;
+		}
 	}
 
 	&__text {
@@ -268,6 +322,10 @@ section {
 		margin: 0 0 20px 0;
 		font-size: 45px;
 		font-weight: 600;
+
+		@media (max-width: $p768) {
+			font-size: 30px;
+		}
 	}
 
 
@@ -319,24 +377,13 @@ section {
 	}
 }
 
-// .avatar {
-// 	&__container {
-// 	}
-// }
 
-/*-------------------
-		PAGE__ABOUT-ME
---------------------*/
+
+/*===========================================================
+		ABOUT
+============================================================*/
 
 .about {
-
-	&__container {
-	}
-
-	&__title {
-		margin: 0px auto 50px auto;
-		text-align: center;
-	}
 
 	&__text {
 		text-align: justify;
@@ -344,16 +391,13 @@ section {
 }
 
 
-/*-------------------
-		PAGE__SKILLS
---------------------*/
+/*===========================================================
+		SKILLS
+============================================================*/
 
 .skills {
 
 	position: relative;
-
-	&__container {
-	}
 
 	&__grid {
 		display: grid;
@@ -376,7 +420,11 @@ section {
 
 	background-color: #212222;
 	padding: 15px;
-	// position: relative;
+	position: relative;
+	
+	@media (max-width: $p768) {
+		padding: 8px;
+	}
 
 	&__head {
 		display: inline-flex;
@@ -427,17 +475,19 @@ section {
 	border-top: 8px solid #e0a80d;
 	border-right: 8px solid transparent;
 	border-left: 8px solid transparent;
+
 	@media (max-width: $p768) {
 		display: block;
 	}
 
 	&__active {
 		transform: rotate(-180deg);
-
 	}
 }
 
-
+/*===========================================================
+		EXPERIANCE
+============================================================*/
 
 .experience {
 
@@ -455,8 +505,6 @@ section {
 
 	&__subtitle {
 		text-align: left;
-		margin-bottom: 20px;
-		font-size: 22px;
 	}
 
 	margin-bottom: 30px;
@@ -467,11 +515,13 @@ section {
 
 	&__subtitle {
 		text-align: left;
-		margin-bottom: 20px;
-		font-size: 22px;
 	}
 
 }
+
+/*===========================================================
+		INFO
+============================================================*/
 
 .info{
 
@@ -496,7 +546,7 @@ section {
 		text-align: left;
 		margin-bottom: 15px;
 		color: white;
-		font-size: 20px;
+		// font-size: 20px;
 	}
 
 	li {
@@ -519,13 +569,6 @@ section {
 		margin-right: 20px;
 		margin-bottom: 20px;
 
-		a {
-			padding-top: 10px;
-			text-align: center;
-			color: white;
-			font-size: 18px;
-		}
-
 		img {
 			max-height: 50px;
 			margin: 6px;
@@ -536,10 +579,25 @@ section {
 			max-height: 56px;
 			margin: 3px;
 		}
+
+		a {
+			padding-top: 10px;
+			text-align: center;
+			color: white;
+			font-size: 18px;
+
+			@media (max-width: $p768) {
+				font-size: 16px;
+				padding-top: 0px;
+			}
+		}
 	
 	}
 }
 
+/*===========================================================
+		CONTACTS
+============================================================*/
 
 .contacts {
 	
@@ -550,10 +608,14 @@ section {
 	a {
 		color: white;
 		display: block;
-		margin: auto 8px auto 0;
+		margin: auto 20px auto 0;
 		font-size: 17px;
-		margin-right: 20px;
+		// margin-right: 20px;
 		transition: 0.15s;
+
+		@media (max-width: $p768) {
+			font-size: 16px;
+		}
 	}
 	
 	a:hover:not(.button) {
@@ -566,7 +628,12 @@ section {
 		margin-right: 20px;
 
 	}
+
 	li {
 		margin-bottom: 20px;
+
+		@media (max-width: $p768) {
+			margin-bottom: 10px;
+		}
 	}
 }
