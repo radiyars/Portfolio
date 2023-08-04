@@ -12,9 +12,9 @@ $p992: 991.98px; // 2
 $p768: 767.98px; // 3
 $p480: 479.98px; // 4
 $section-padding-top-bottom-1070: 80px;
-$section-padding-top-bottom-768: 30px;
+$section-padding-top-bottom-768: 40px;
 $section-margin-bottom-1070: 80px;
-$section-margin-bottom-768: 30px;
+$section-margin-bottom-768: 40px;
 $header-heght-1070: 100px;
 $header-heght-768: 50px;
 
@@ -43,7 +43,6 @@ body {
 
 ._container {
 	max-width: 1070px;
-	// padding: 0px 15px;
 	padding: 0px 15px;
 	@media (max-width: $p768) {
 		padding: 0px 8px;
@@ -51,7 +50,6 @@ body {
 	margin: 0 auto;
 	box-sizing: content-box;
 }
-
 
 .title {
 	color: #e0a80d;
@@ -79,6 +77,14 @@ body {
 	}
 }
 
+.date {
+	font-size: 20px;
+	line-height: 140%;
+
+	@media (max-width: $p768) {
+		font-size: 18px;
+	}
+}
 
 section {
 	scroll-margin-top: $header-heght-1070;
@@ -93,6 +99,7 @@ section {
 --------------------*/
 
 .header {
+
 	position: fixed;
 	width: 100%;
 	left: 0;
@@ -145,7 +152,6 @@ section {
 
 	}
 
-	// &__item:not(:first-child) {
 
 	&__item {
 		margin: 0px 0px 0px 30px;
@@ -384,9 +390,21 @@ section {
 ============================================================*/
 
 .about {
+// width: 100%;
 
 	&__text {
-		text-align: justify;
+		margin-bottom: 30px;
+		
+	}
+
+	&__buttons {
+		display: flex;	
+	}
+
+	&__button {
+		@media (max-width: $p768) {
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -429,6 +447,11 @@ section {
 	&__head {
 		display: inline-flex;
 		margin-bottom: 20px;
+		font-size: 18px;
+		
+		@media (max-width: $p768) {
+			font-size: 16px;
+		}
 	}
 
 	div {
@@ -436,7 +459,7 @@ section {
 	}
 
 	img {
-		max-width: 20px;
+		max-width: 16px;
 		object-fit: contain;
 		margin-right: 8px;
 	}
@@ -472,9 +495,9 @@ section {
 	top: 17px;
 	width: 0;
 	height: 0;
-	border-top: 8px solid #e0a80d;
-	border-right: 8px solid transparent;
-	border-left: 8px solid transparent;
+	border-top: 6px solid #e0a80d;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
 
 	@media (max-width: $p768) {
 		display: block;
@@ -488,18 +511,6 @@ section {
 /*===========================================================
 		EXPERIANCE
 ============================================================*/
-
-.experience {
-
-	&__container {
-	}
-
-	&__no-speciality {
-	}
-
-	&__by-speciality {
-	}
-}
 
 .no-speciality  {
 
@@ -523,7 +534,7 @@ section {
 		INFO
 ============================================================*/
 
-.info{
+.info {
 
 	display: flex;
 
@@ -533,9 +544,6 @@ section {
 
 	&__date {
 		width: 180px;
-		font-size: 18px;
-		line-height: 140%;
-		// margin-right: 10px;
 	}
 
 	&__description{
@@ -546,18 +554,23 @@ section {
 		text-align: left;
 		margin-bottom: 15px;
 		color: white;
-		// font-size: 20px;
 	}
 
 	li {
 		margin-bottom: 10px;
-		text-align: justify;
-
+		// list-style:inside disc;
 	}
+
+	li::before {
+		content: '\2014';
+		padding-right: 10px;
+	   }
 	
+
 	ul {
 		margin-bottom: 30px;
 	}
+	
 	
 	&__projects {
 		display: flex;
@@ -581,10 +594,11 @@ section {
 		}
 
 		a {
-			padding-top: 10px;
+			padding-top: 5px;
 			text-align: center;
 			color: white;
 			font-size: 18px;
+			font-weight: 600;
 
 			@media (max-width: $p768) {
 				font-size: 16px;
@@ -610,7 +624,6 @@ section {
 		display: block;
 		margin: auto 20px auto 0;
 		font-size: 17px;
-		// margin-right: 20px;
 		transition: 0.15s;
 
 		@media (max-width: $p768) {
@@ -618,15 +631,10 @@ section {
 		}
 	}
 	
-	a:hover:not(.button) {
-		color: #e0a80d;
-	}
-
 	img {
-		max-width: 30px;
+		max-width: 25px;
 		object-fit: contain;
 		margin-right: 20px;
-
 	}
 
 	li {

@@ -161,6 +161,17 @@ body {
   }
 }
 
+.date {
+  font-size: 20px;
+  line-height: 140%;
+}
+
+@media (max-width: 767.98px) {
+  .date {
+    font-size: 18px;
+  }
+}
+
 section {
   scroll-margin-top: 100px;
 }
@@ -294,7 +305,7 @@ section {
 
 @media (max-width: 767.98px) {
   .page__about {
-    padding: 30px 0px;
+    padding: 40px 0px;
   }
 }
 
@@ -304,7 +315,7 @@ section {
 
 @media (max-width: 767.98px) {
   .page__skills {
-    padding: 30px 0px;
+    padding: 40px 0px;
   }
 }
 
@@ -315,7 +326,7 @@ section {
 
 @media (max-width: 767.98px) {
   .page__experience {
-    padding: 30px 0px;
+    padding: 40px 0px;
   }
 }
 
@@ -326,7 +337,7 @@ section {
 
 @media (max-width: 767.98px) {
   .page__education {
-    padding: 30px 0px;
+    padding: 40px 0px;
     padding-bottom: 0px;
   }
 }
@@ -337,7 +348,7 @@ section {
 
 @media (max-width: 767.98px) {
   .page__course {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 
@@ -348,7 +359,7 @@ section {
 
 @media (max-width: 767.98px) {
   .page__contaсts {
-    padding: 30px 0px;
+    padding: 40px 0px;
   }
 }
 
@@ -499,7 +510,19 @@ section {
 		ABOUT
 ============================================================*/
 .about__text {
-  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.about__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767.98px) {
+  .about__button {
+    margin: 0 auto;
+  }
 }
 
 /*===========================================================
@@ -544,6 +567,13 @@ section {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-bottom: 20px;
+  font-size: 18px;
+}
+
+@media (max-width: 767.98px) {
+  .skill__head {
+    font-size: 16px;
+  }
 }
 
 .skill div {
@@ -551,7 +581,7 @@ section {
 }
 
 .skill img {
-  max-width: 20px;
+  max-width: 16px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-right: 8px;
@@ -589,9 +619,9 @@ section {
   top: 17px;
   width: 0;
   height: 0;
-  border-top: 8px solid #e0a80d;
-  border-right: 8px solid transparent;
-  border-left: 8px solid transparent;
+  border-top: 6px solid #e0a80d;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
 }
 
 @media (max-width: 767.98px) {
@@ -640,8 +670,6 @@ section {
 
 .info__date {
   width: 180px;
-  font-size: 18px;
-  line-height: 140%;
 }
 
 .info__description {
@@ -658,7 +686,11 @@ section {
 
 .info li {
   margin-bottom: 10px;
-  text-align: justify;
+}
+
+.info li::before {
+  content: '\2014';
+  padding-right: 10px;
 }
 
 .info ul {
@@ -696,10 +728,11 @@ section {
 }
 
 .info__project a {
-  padding-top: 10px;
+  padding-top: 5px;
   text-align: center;
   color: white;
   font-size: 18px;
+  font-weight: 600;
 }
 
 @media (max-width: 767.98px) {
@@ -733,12 +766,8 @@ section {
   }
 }
 
-.contacts a:hover:not(.button) {
-  color: #e0a80d;
-}
-
 .contacts img {
-  max-width: 30px;
+  max-width: 25px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-right: 20px;
