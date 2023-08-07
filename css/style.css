@@ -376,16 +376,9 @@ section {
           align-items: center;
 }
 
-@media (max-width: 991.98px) {
-  .home {
-    padding: 60px 0 0 0;
-    margin: 0 0 100px 0;
-  }
-}
-
 @media (max-width: 767.98px) {
   .home {
-    padding: 100px 0 0 0;
+    padding: 60px 0 0 0;
     margin: 0 0 50px 0;
   }
 }
@@ -474,15 +467,21 @@ section {
 }
 
 .home__avatar {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 300px;
-          flex: 0 0 300px;
-  width: 250px;
-  border: 7px solid white;
+  outline: white solid 7px;
+  outline-offset: -30px;
 }
 
-.avatar img {
-  max-width: 100%;
+.home__avatar img {
+  max-width: 300px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 767.98px) {
+  .home__avatar img {
+    max-width: 200px;
+  }
 }
 
 .button {
@@ -651,6 +650,13 @@ section {
 }
 
 /*===========================================================
+		EDUCATION
+============================================================*/
+.education {
+  margin-bottom: 30px;
+}
+
+/*===========================================================
 		INFO
 ============================================================*/
 .info {
@@ -688,6 +694,10 @@ section {
   margin-bottom: 10px;
 }
 
+.info li:last-child {
+  margin-bottom: 0px;
+}
+
 .info li::before {
   content: '\2014';
   padding-right: 10px;
@@ -695,6 +705,10 @@ section {
 
 .info ul {
   margin-bottom: 30px;
+}
+
+.info ul:last-child {
+  margin-bottom: 0px;
 }
 
 .info__projects {
@@ -711,8 +725,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 0 20px;
 }
 
 .info__project img {
